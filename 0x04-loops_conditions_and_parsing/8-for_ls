@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Iterates through non-hidden files in the current directory and prints each filename after the first dash using parameter expansion
+
+for i in *; do
+  #skip if no match (safe practice)
+  [ -e "$i" ] || continue
+  #skip hidden files (extra safety)
+  [[ "$i" == ".*" ]] && continue
+  echo "${i#*-}"
+done

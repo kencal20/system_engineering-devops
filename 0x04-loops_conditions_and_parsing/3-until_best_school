@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#using until loop to generate multiple text ,"Best School"
+
+i=1
+
+until [ "$i" -gt 10 ]; do
+  echo "Best School"
+  ((i++))
+done

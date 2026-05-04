@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#using while loop to generate multiple text ,"Best School". replacing the 9th with hi
+
+i=1
+
+while [ "$i" -le 10 ]; do
+  if [ "$i" -eq 9 ]; then
+    echo "Hi"
+  else
+    echo "Best School"
+  fi
+  ((i++))
+done
